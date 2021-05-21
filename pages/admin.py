@@ -8,7 +8,7 @@ from django.utils.html import format_html
 
 class teamAdmin(admin.ModelAdmin):
     def thumbnail(self,object):
-        return format_html('<img src="{}" width="40">'.format(object.photo.url))
+        return format_html('<img src="{}" width="60">'.format(object.photo.url))
     
     list_display=('id','thumbnail',"first_name","last_name","created_date")
     list_display_links=('first_name',)
